@@ -1,0 +1,11 @@
+type Query {
+  users: [UserModel]
+}
+
+type UserModel {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  email: String!
+  contactNo: String!
+}

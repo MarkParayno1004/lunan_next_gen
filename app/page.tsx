@@ -1,7 +1,7 @@
-import AboutUsPage from "./components/landingPage/aboutUsPage";
-import HeaderPage from "./components/landingPage/headerPage";
-import MobilePage from "./components/landingPage/mobilePage";
-import ProcessPage from "./components/landingPage/processPage";
+import AboutUsPage from "./pages/aboutUsPage";
+import HeaderPage from "./pages/headerPage";
+import MobilePage from "./pages/mobilePage";
+import ProcessPage from "./pages/processPage";
 export default function Page() {
   return (
     <div>

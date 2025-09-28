@@ -1,7 +1,18 @@
 "use client";
+import { useQuery } from "@apollo/client/react";
 import Link from "next/link";
+import { GetUsersQuery } from "./lib/types";
+import { GET_USERS } from "../lib/queries";
+import React from "react";
 
 export default function Page() {
+  const { data, loading, error } = useQuery<GetUsersQuery>(GET_USERS);
+
+  React.useEffect(() => {
+    if (data) {
+      data?.users?.map((users) => console.log(users));
+    }
+  }, [data]);
   return (
     <div className="flex flex-wrap max-h-screen w-full justify-center rounded-l-xl py-40">
       <div className="bg-primary flex shadow-md rounded-xl">
